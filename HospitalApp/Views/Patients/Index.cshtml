@@ -1,4 +1,5 @@
-﻿@model IEnumerable<HospitalApp.Models.Doctor>
+﻿@using System.Threading.Tasks
+@model IEnumerable<HospitalApp.Models.Patient>
 @{
     ViewBag.Title = "Index";
 }
@@ -12,7 +13,7 @@
             @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Specialization)
+            @Html.DisplayNameFor(model => model.Status)
         </th>
         <th></th>
     </tr>
@@ -23,7 +24,13 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Specialization)
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DayOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxCode)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

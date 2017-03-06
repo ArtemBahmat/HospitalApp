@@ -1,10 +1,12 @@
-﻿@model dynamic
+﻿@using System.Threading.Tasks
+@model dynamic
 
 @{
     ViewBag.Title = "title";
     //Layout = "_Layout";
 }
 
-<h2>title</h2>
+<h2>Choose what do you want to work with?</h2>
 
-@Html.ActionLink("Home", "Index", "Doctors")
+@Html.ActionLink("Doctors", "Index", "Doctors")<br>
+@Html.ActionLink("Patients", "Index", "Patients")

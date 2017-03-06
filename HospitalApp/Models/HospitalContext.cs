@@ -10,6 +10,7 @@ namespace HospitalApp.Models
     {
         public HospitalContext() : base("HospitalConnection")
         {
+            Database.SetInitializer<HospitalContext>(new CreateDatabaseIfNotExists<HospitalContext>());
         }
 
         public DbSet<Patient> Patients { get; set; }
